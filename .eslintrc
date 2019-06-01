@@ -5,6 +5,12 @@
     "prettier/prettier": ["error"],
     "no-var": "off",
     "no-param-reassign": "off",
-    "prefer-rest-params": "off"
+    "prefer-rest-params": "off",
+    "object-shorthand": "off",
+    "prefer-template": "off",
+    "vars-on-top": "off",
+    "prefer-destructuring": "off",
+    "func-names": "off",
+    "no-underscore-dangle": "off"
   }
 }
