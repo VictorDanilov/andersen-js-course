@@ -1,22 +1,29 @@
 /**
+ * Просто преобразовать содержимое функции task4Old под современный код
+ *
  * Пример вызова
- * console.log(task4Old(10)); -> {x: 10, y: 10, bar: function, baztest: 'new field'}
+ * const obj = task4Old()); obj -> {x: 10, y: 10, bar: function, baztest: 'new field'}
+ * obj.bar(); -> 30
  */
 
 export function task4Old() {
-  var x = 0;
-  var y = 0;
-  var foo = function() {
-    return 'test';
-  };
+  var x = 10;
+  var y = 20;
+
   var obj = {
     x: x,
     y: y,
-    bar: function(x, y) {
-      return this.x + x + Math.pow(y, this.y);
+    bar: function bar() {
+      return this.x + this.y;
     },
   };
+
+  function foo() {
+    return 'test';
+  }
+
   obj['baz' + foo()] = 'new field';
+
   return obj;
 }
 

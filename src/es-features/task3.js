@@ -1,10 +1,13 @@
 /**
+ * Передаем в функцию массив
+ * Нужно вернуть новый массив, в котором первыми значениями будут 1, 2,
+ * а остальными значениями будут значения из переданного массива
+ *
  * Пример вызова
- * console.log(task3Old()); ->  [ 1, 2, 'hello', 'test', 12 ]
+ * console.log(task3Old(['hello', 'test', 12])); ->  [ 1, 2, 'hello', 'test', 12 ]
  */
 
-export function task3Old() {
-  var params = ['hello', 'test', 12];
+export function task3Old(params) {
   return [1, 2].concat(params);
 }
 

@@ -1,4 +1,7 @@
 /**
+ * Просто преобразовать содержимое функции task8Old под современный код,
+ * а именно, содержимое метода calculateNumsFive
+ *
  * Пример вызова
  * console.log(task8Old()); -> [0, 5, 10, 15]
  */
@@ -14,6 +17,8 @@ export function task8Old() {
           self.fives.push(v);
         }
       });
+
+      return self.fives;
     },
   };
 
