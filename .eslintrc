@@ -4,6 +4,7 @@
   "rules": {
     "prettier/prettier": ["error"],
     "no-var": "off",
-    "no-param-reassign": "off"
+    "no-param-reassign": "off",
+    "prefer-rest-params": "off"
   }
 }
