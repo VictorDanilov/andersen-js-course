@@ -6,26 +6,37 @@
  */
 
 export function task6Old() {
-  function userModule() {
-    return {
-      name: 'Max',
-      value: 100,
-      role: { name: 'Admin' },
-      cases: [{ id: '1' }],
-    };
-  }
+    function userModule() {
+        return {
+            name: 'Max',
+            value: 100,
+            role: {name: 'Admin'},
+            cases: [{id: '1'}],
+        };
+    }
 
-  var tmp = userModule();
-  var name = tmp.name;
-  var value = tmp.value;
-  var role = tmp.role.name;
-  var isActive = tmp.isActive === undefined ? false : tmp.isActive;
-  var firstCaseId = tmp.cases[0].id;
+    var tmp = userModule();
+    var name = tmp.name;
+    var value = tmp.value;
+    var role = tmp.role.name;
+    var isActive = tmp.isActive === undefined ? false : tmp.isActive;
+    var firstCaseId = tmp.cases[0].id;
 
-  return [name, value, role, isActive, firstCaseId];
+    return [name, value, role, isActive, firstCaseId];
 }
 
 // Напишите реализацию функции task6Old на ES6+ ниже этого комментария.
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
-export function task6New() {}
+export function task6New() {
+    var tmp = () => {
+        return {
+            name: 'Max',
+            value: 100,
+            role: {name: 'Admin'},
+            cases: [{id: '1'}]
+        };
+    };
+
+    return [tmp().name, tmp().value, tmp().role.name, tmp().isActive === undefined ? false : tmp().isActive, tmp().cases[0].id];
+}
