@@ -13,3 +13,32 @@
  * generator.next(); -> 'Complete!'
  * generator.next(); -> 'Complete!'
  */
+
+export function createGenerator(array) {
+    var i = 0;
+    var a = function () {};
+
+    a.next = function () {
+        if (i < array.length) {
+            return array[i++];
+        } else {
+            return 'Complete!'
+        }
+    };
+
+    return a;
+}
+
+export function createGenerator2(array) {
+    var i = 0;
+
+    return {
+        next: function () {
+            if (i < array.length) {
+                return array[i++];
+            } else {
+                return 'Complete!'
+            }
+        }
+    }
+}
