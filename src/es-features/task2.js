@@ -16,4 +16,7 @@ export function task2Old(a, b) {
 // Напишите реализацию функции task2Old на ES6+ ниже этого комментария.
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
-export function task2New() {}
+const task2New = (a, b,...args) => {
+  return (a + b) * args.length;
+}
+const task2New = (a, b, ...args) => (a + b)*args.length
