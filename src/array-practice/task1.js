@@ -14,3 +14,25 @@
  * console.log(any([0, 0, 1, 0])); -> true
  * console.log(any([0, 0, 0, 0])); -> false
  */
+
+export function any(array, callback) {
+
+    if (!callback) {
+        return true;
+    }
+    for (let i = 0; i < array.length; i++) {
+        if (callback(array[i])) {
+            return true;
+        }
+    }
+    return false;
+}
+
+
+export function any2(array, callback) {
+
+    if (!callback) {
+        return true;
+    }
+    return array.some(callback);
+}
