@@ -15,3 +15,19 @@
  * console.log(arrayDiff([1, 2, 3], [1, 2, 4])); -> [3, 4]
  * console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); -> [4, '4']
  */
+
+export function arrayDiff(arrayOne, arrayTwo) {
+    let arrayResult = [];
+    let check = (array1, array2) => {
+        for (let i = 0; i < array1.length; i++) {
+            if (array2.indexOf(array1[i]) < 0) {
+                arrayResult.push(array1[i]);
+            }
+        }
+    };
+
+    check(arrayOne, arrayTwo);
+    check(arrayTwo, arrayOne);
+    
+    return arrayResult;
+}
