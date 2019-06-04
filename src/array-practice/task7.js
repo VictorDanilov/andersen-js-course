@@ -11,3 +11,17 @@
  * console.log(take([1, 2, 3], 5)); -> [1, 2, 3]
  * console.log(take([1, 2, 3], 2)); -> [1, 2]
  */
+
+export function take(array, value = 0) {
+    if (!array) {
+        return;
+    }
+
+    let from = value >= array.length ? array.length : value;
+    let result = [];
+
+    for (let i = 0; i < from; i++) {
+        result.push(array[i]);
+    }
+    return result;
+}
