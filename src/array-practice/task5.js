@@ -16,7 +16,8 @@
 
 export function createGenerator(array) {
     var i = 0;
-    var a = function () {};
+    var a = function () {
+    };
 
     a.next = function () {
         if (i < array.length) {

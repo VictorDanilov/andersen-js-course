@@ -10,7 +10,7 @@
 
 export function union(arrayOne, arrayTwo) {
     let arrayResult = [];
-    
+
     let check = (array1) => {
         for (let i = 0; i < array1.length; i++) {
             if (arrayResult.indexOf(array1[i]) < 0) {

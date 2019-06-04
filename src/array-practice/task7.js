@@ -23,5 +23,6 @@ export function take(array, value = 0) {
     for (let i = 0; i < from; i++) {
         result.push(array[i]);
     }
+    
     return result;
 }

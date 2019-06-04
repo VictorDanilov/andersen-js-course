@@ -27,7 +27,7 @@ export function any(array, callback) {
 //     }
 // }
 
-// export function any2(array, callback) {
+// export function any(array, callback) {
 //     for (let i = 0; i < array.length; i++) {
 //         if (callback && callback(array[i]) || !callback && array[i]) {
 //             return true;

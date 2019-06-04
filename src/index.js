@@ -21,26 +21,33 @@ import {arrayDiff} from "./array-practice/task2";
 import {forEachRight} from "./array-practice/task3";
 import {union} from "./array-practice/task4";
 import {createGenerator} from "./array-practice/task5";
+import {transformArrayToNumber} from "./array-practice/task6";
+import {take} from "./array-practice/task7";
+import {without} from "./array-practice/task8";
+import {indexOfAll} from "./array-practice/task9";
+import {membersOnActiveMeetups} from "./array-practice/task10";
+
+console.log('1=============');
 
 console.log(any([0, 1, 2, 0], x => x >= 2)); // true
 console.log(any([0, 0, 1, 0])); // true
 console.log(any([0, 0, 0, 0])); // false
 
-console.log('=============');
+console.log('2=============');
 
 console.log(arrayDiff([1, 2, 3], [1, 2, 4])); // [3, 4]
 console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); // [4, '4']
 
-console.log('=============');
+console.log('3=============');
 
 forEachRight([1, 2, 3, 4], val => console.log(val)); // в консоль 4 3 2 1
 
-console.log('=============');
+console.log('4=============');
 
 console.log(union([5, 1, 2, 3, 3], [4, 3, 2])); // [5, 1, 2, 3, 4]
 console.log(union([5, 1, 3, 3, 4], [1, 3, 4])); // [5, 1, 3, 4]
 
-console.log('=============');
+console.log('5=============');
 
 const generator = createGenerator([1, '6', 3, 2]);
 console.log(generator.next()); // 1
@@ -49,6 +56,43 @@ console.log(generator.next()); // 3
 console.log(generator.next()); // 2
 console.log(generator.next()); // 'Complete!'
 console.log(generator.next()); // 'Complete!'
+
+console.log('6=============');
+
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item)); // 60
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item, 10)); // 70
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item)); // 0
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item, 1)); // 6000
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc - item)); // -60
+
+console.log('7=============');
+
+console.log(take([1, 2, 3], 5)); // [1, 2, 3]
+console.log(take([1, 2, 3], 2)); // [1, 2]
+
+console.log('8=============');
+
+console.log(without([2, 1, 2, 3], 1, 2)) // [3]
+console.log(without([2, 1, 10, 20], 1, 2)) // [10, 20]
+
+
+console.log('9=============');
+
+console.log(indexOfAll([1, 2, 3, 1, 2, 3], 1)); // [0, 3]
+console.log(indexOfAll([1, 2, 3], 4)); // []
+
+console.log('10=============');
+
+const meetups = [
+    {name: 'JavaScript', isActive: true, members: 100},
+    {name: 'Angular', isActive: true, members: 900},
+    {name: 'Node', isActive: false, members: 600},
+    {name: 'React', isActive: true, members: 500},
+];
+
+console.log(membersOnActiveMeetups(meetups));
+
+//----------------------------------------------------------------------------------//
 
 // import {task1Old, task1New} from './es-features/task1';
 // import {task2Old, task2New} from './es-features/task2';

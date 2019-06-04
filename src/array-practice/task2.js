@@ -28,6 +28,6 @@ export function arrayDiff(arrayOne, arrayTwo) {
 
     check(arrayOne, arrayTwo);
     check(arrayTwo, arrayOne);
-    
+
     return arrayResult;
 }
