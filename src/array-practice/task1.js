@@ -16,23 +16,22 @@
  */
 
 export function any(array, callback) {
-
-    if (!callback) {
-        return true;
-    }
-    for (let i = 0; i < array.length; i++) {
-        if (callback(array[i])) {
-            return true;
-        }
-    }
-    return false;
+    return !!(!callback && array.some(x=> !!x) || callback && array.some(callback));
 }
 
+// export function any(array, callback) {
+//     if (!callback && array.some(x=> !!x) || callback && array.some(callback)) {
+//         return true;
+//     } else {
+//         return false
+//     }
+// }
 
-export function any2(array, callback) {
-
-    if (!callback) {
-        return true;
-    }
-    return array.some(callback);
-}
+// export function any2(array, callback) {
+//     for (let i = 0; i < array.length; i++) {
+//         if (callback && callback(array[i]) || !callback && array[i]) {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
