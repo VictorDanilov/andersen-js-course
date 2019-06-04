@@ -72,8 +72,8 @@ console.log(take([1, 2, 3], 2)); // [1, 2]
 
 console.log('8=============');
 
-console.log(without([2, 1, 2, 3], 1, 2)) // [3]
-console.log(without([2, 1, 10, 20], 1, 2)) // [10, 20]
+console.log(without([2, 1, 2, 3], 1, 2)); // [3]
+console.log(without([2, 1, 10, 20], 1, 2)); // [10, 20]
 
 
 console.log('9=============');
@@ -87,7 +87,7 @@ const meetups = [
     {name: 'JavaScript', isActive: true, members: 100},
     {name: 'Angular', isActive: true, members: 900},
     {name: 'Node', isActive: false, members: 600},
-    {name: 'React', isActive: true, members: 500},
+    {name: 'React', isActive: true, members: 500}
 ];
 
 console.log(membersOnActiveMeetups(meetups));
