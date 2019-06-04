@@ -11,3 +11,24 @@
  * console.log(without([2, 1, 2, 3], 1, 2)) -> [3]
  * console.log(without([2, 1, 10, 20], 1, 2)) -> [10, 20]
  */
+
+export function without(array, ...values) {
+
+    if (!array) {
+        return;
+    }
+
+    if (!values) {
+        return [...array];
+    }
+
+    let result = [];
+
+    array.forEach((item) => {
+        if (values.indexOf(item) < 0) {
+            result.push(item);
+        }
+    });
+
+    return result;
+}
