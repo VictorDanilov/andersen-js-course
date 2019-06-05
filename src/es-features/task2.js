@@ -19,4 +19,4 @@ export function task2Old(a, b) {
 const task2New = (a, b,...args) => {
   return (a + b) * args.length;
 }
-const task2New = (a, b, ...args) => (a + b)*args.length
+const task2New = (a, b, ...args) => (a + b) * args.length;
