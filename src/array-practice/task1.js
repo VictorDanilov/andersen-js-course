@@ -14,3 +14,12 @@
  * console.log(any([0, 0, 1, 0])); -> true
  * console.log(any([0, 0, 0, 0])); -> false
  */
+  
+function any(arr, foo = x => !!x) {
+  let result;
+  const posArr = arr.filter(foo);
+
+  if (posArr.length !== 0) result = true;
+  else result = false;
+  return result;
+}
