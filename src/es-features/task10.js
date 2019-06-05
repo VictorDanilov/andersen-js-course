@@ -58,6 +58,7 @@ class NewA {
   constructor(name) {
     this.name = name;
   }
+
   getName() {
     return this.name;
   }
@@ -68,14 +69,25 @@ class NewB extends NewA {
     super(name);
     this.age = age;
   }
+
   getName(text) {
     return super.getName() + " " + text;
   }
+
   getAge() {
     return this.age;
   }
-  defaultUser() {
-    return { name: "test", age: 0 };
+
+  static defaultUser() {
+    return new NewB("test", 0);
+  }
+
+  set color(color) {
+    this._color = color;
+  }
+
+  get color() {
+    return this._color;
   }
 }
 
@@ -88,5 +100,3 @@ export function task10New() {
   console.log(b.color); // red
   return b;
 }
-
-task10New();
