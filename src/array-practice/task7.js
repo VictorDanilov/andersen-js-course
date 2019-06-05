@@ -11,3 +11,8 @@
  * console.log(take([1, 2, 3], 5)); -> [1, 2, 3]
  * console.log(take([1, 2, 3], 2)); -> [1, 2]
  */
+
+function take(arr, number) {
+  if (number > arr.length) return arr;
+  return arr.slice(number);
+}
