@@ -14,4 +14,4 @@ export function task3Old(params) {
 // Напишите реализацию функции task3Old на ES6+ ниже этого комментария.
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
-const task3New = args => [1,2, ...args]
+const task3New = args => [1,2, ...args];
