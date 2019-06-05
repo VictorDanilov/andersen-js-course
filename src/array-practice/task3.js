@@ -9,3 +9,10 @@
  *
  * forEachRight([1, 2, 3, 4], val => console.log(val)); -> в консоль 4 3 2 1
  */
+
+
+function forEachRight(arr, val) {
+  let arr1 = arr.reverse(val);
+  return arr1.join(' ');
+}
+ 
