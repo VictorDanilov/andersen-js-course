@@ -32,7 +32,7 @@ export function task4Old() {
 
 function task4New() {
   let x = 10;
-  let y = 20;
+  const y = 20;
   const obj = {
     x,
     y,
