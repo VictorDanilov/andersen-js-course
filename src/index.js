@@ -26,6 +26,16 @@
 // import { task8Old, task8New } from './es-features/task8';
 // import { task9Old, task9New } from './es-features/task9';
 // import { task10Old, task10New } from './es-features/task10';
+// import any from './array-practice/task1';
+// import arrayDiff from './array-practice/task2';
+// import forEachRight from './array-practice/task3';
+// import union from './array-practice/task4';
+// import createGenerator from './array-practice/task5';
+// import transformArrayToNumber from './array-practice/task6';
+// import take from './array-practice/task7';
+// import without from './array-practice/task8';
+// import indexOfAll from './array-practice/task9';
+// import { meetups, membersOnActiveMeetups } from './array-practice/task10';
 
 // console.log('task1 old', task1Old(10) === 500); // true
 // console.log('task1 new', task1New(10) === 500); // true
@@ -76,3 +86,58 @@
 // console.log('task10 new', task10New()); // {name: 'Max', age: 12, color: red}
 
 // console.log('=============');
+
+// console.log(any([0, 1, 2, 0], x => x >= 2));
+// console.log(any([0, 0, 1, 0]));
+// console.log(any([0, 0, 0, 0]));
+
+// console.log('=============');
+
+// console.log(arrayDiff([1, 2, 3], [1, 2, 4]));
+// console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4']));
+
+// console.log('=============');
+
+// forEachRight([1, 2, 3, 4], val => console.log(val));
+
+// console.log('=============');
+
+// console.log(union([5, 1, 2, 3, 3], [4, 3, 2]));
+// console.log(union([5, 1, 3, 3, 4], [1, 3, 4]));
+
+// console.log('=============');
+
+// const generator = createGenerator([1, '6', 3, 2]);
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+
+// console.log('=============');
+
+// console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item));
+// console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item, 10));
+// console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item));
+// console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item, 1));
+// console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc - item));
+
+// console.log('=============');
+
+// console.log(take([1, 2, 3], 5));
+// console.log(take([1, 2, 3], 2));
+
+// console.log('=============');
+
+// console.log(without([2, 1, 2, 3], 1, 2));
+// console.log(without([2, 1, 10, 20], 1, 2));
+
+// console.log('=============');
+
+// console.log(indexOfAll([1, 2, 3, 1, 2, 3], 1));
+// console.log(indexOfAll([1, 2, 3], 4));
+
+// console.log('=============');
+
+// console.log(membersOnActiveMeetups(meetups));
