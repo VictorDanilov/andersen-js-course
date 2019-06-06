@@ -13,3 +13,15 @@
  * generator.next(); -> 'Complete!'
  * generator.next(); -> 'Complete!'
  */
+
+const createGenerator = array => {
+  return {
+    array,
+    next() {
+      if (array.length > 0) return array.shift();
+      return 'Complete!';
+    },
+  };
+};
+
+export default createGenerator;
