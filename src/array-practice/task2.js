@@ -15,3 +15,12 @@
  * console.log(arrayDiff([1, 2, 3], [1, 2, 4])); -> [3, 4]
  * console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); -> [4, '4']
  */
+
+const arrayDiff = (firstArr, secondArr) => {
+  return [
+    ...firstArr.filter(elem => !secondArr.includes(elem)),
+    ...secondArr.filter(elem => !firstArr.includes(elem)),
+  ];
+};
+
+export default arrayDiff;
