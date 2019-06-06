@@ -11,3 +11,7 @@
  * console.log(take([1, 2, 3], 5)); -> [1, 2, 3]
  * console.log(take([1, 2, 3], 2)); -> [1, 2]
  */
+
+const take = (array, num) => array.splice(0, num);
+
+export default take;
