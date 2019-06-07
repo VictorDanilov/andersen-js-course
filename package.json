@@ -7,7 +7,18 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --open",
-    "build": "webpack"
+    "build": "webpack",
+    "lint": "eslint --debug src/",
+    "lint:write": "eslint --debug src/ --fix",
+    "prettier": "prettier --write src/**/*.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {    
+    "*.js": ["yarn lint:write", "git add"]  
   },
   "devDependencies": {
     "eslint": "5.3.0",
@@ -16,6 +27,8 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^3.1.0",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^2.4.0",
+    "lint-staged": "^8.2.0",
     "prettier": "^1.17.1",
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2",
