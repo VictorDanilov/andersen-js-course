@@ -14,3 +14,10 @@
  * console.log(any([0, 0, 1, 0])); -> true
  * console.log(any([0, 0, 0, 0])); -> false
  */
+function any(arr, fn) {
+  if (fn === undefined) fn = x => Boolean(x);
+  return arr.some(fn);
+}
+console.log(any([0, 1, 2, 0], x => x >= 2));
+console.log(any([0, 0, 1, 0]));
+console.log(any([0, 0, 0, 0]));
