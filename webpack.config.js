@@ -14,7 +14,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'JS Course',
+      template: 'src/index.html',
     }),
   ],
 };
