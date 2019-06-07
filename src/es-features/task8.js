@@ -40,6 +40,11 @@ export const task8New = () => {
       });
       return this.fives;
     },
+    // Можно заменить forEach на фильтр (но это не относится к ES6)
+    // calculateNumsFive() {
+    //   this.fives = this.nums.filter(v => v % 5 === 0);
+    //   return this.fives;
+    // },
   };
 
   return obj.calculateNumsFive();
