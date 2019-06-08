@@ -13,3 +13,18 @@
  * generator.next(); -> 'Complete!'
  * generator.next(); -> 'Complete!'
  */
+function createGenerator(arr) {
+  let index = 0;
+  return {
+    next: function next() {
+      return index < arr.length ? arr[index++] : 'Complete!';
+    },
+  };
+}
+const generator = createGenerator([1, '6', 3, 2]);
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
