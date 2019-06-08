@@ -11,3 +11,8 @@
  * console.log(take([1, 2, 3], 5)); -> [1, 2, 3]
  * console.log(take([1, 2, 3], 2)); -> [1, 2]
  */
+function take(arr, count) {
+  return arr.slice(0, count);
+}
+console.log(take([1, 2, 3], 5));
+console.log(take([1, 2, 3], 2));
