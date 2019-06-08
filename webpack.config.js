@@ -23,6 +23,20 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
+      {
+        test: /\.(svg|png|gif|jpg|webp)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[hash:8].[ext]',
+            outputPath: 'images',
+          },
+        },
+      },
+      {
+        test: /\.html$/,
+        use: ['html-loader'],
+      },
     ],
   },
   plugins: [
