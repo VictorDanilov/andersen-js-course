@@ -14,7 +14,7 @@
  * console.log(any([0, 0, 1, 0])); -> true
  * console.log(any([0, 0, 0, 0])); -> false
  */
-function any(arr, fn) {
+export default function any(arr, fn) {
   if (fn === undefined) fn = x => Boolean(x);
   return arr.some(fn);
 }

@@ -16,7 +16,7 @@ const meetups = [
   { name: 'React', isActive: true, members: 500 },
 ];
 
-function membersOnActiveMeetups(meetups) {
+export default function membersOnActiveMeetups(meetups) {
   return meetups.reduce(function(count, current) {
     return current.isActive ? count + current.members : count;
   }, 0);
