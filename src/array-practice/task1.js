@@ -14,3 +14,18 @@
  * console.log(any([0, 0, 1, 0])); -> true
  * console.log(any([0, 0, 0, 0])); -> false
  */
+
+
+export function any(arr, callback) {
+
+  if (!callback) {
+    const res = arr.filter(element => element);
+    return res.length > 0;
+  }
+  return arr.some(callback);
+  
+}
+
+console.log(any([0, 1, 2, 0], x => x >= 2));
+console.log(any([0, 0, 1, 0]));
+console.log(any([0, 0, 0, 0]));

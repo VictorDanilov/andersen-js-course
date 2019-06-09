@@ -20,3 +20,13 @@
  * console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item), 1); -> 6000
  * console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc - item)); -> -60
  */
+
+export function transformArrayToNumber(arr, callback, init = 0) {
+  return arr.reduce(callback, init);
+}
+
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item));
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item, 10));
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item));
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item, 1));
+console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc - item));

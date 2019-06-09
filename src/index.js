@@ -16,6 +16,18 @@
  * Для задач на array-practice импортируйте написанные функции сюда и проверяйте их работу тут.
  */
 
+// import { any } from './array-practice/task1.js';
+// import { arrayDiff } from './array-practice/task2.js';
+// import { forEachRight } from './array-practice/task3.js';
+// import { union } from './array-practice/task4.js';
+// import { createGenerator } from './array-practice/task5.js';
+// import { transformArrayToNumber } from './array-practice/task6.js';
+// import { take } from './array-practice/task7.js';
+// import { task8 } from './array-practice/task8.js';
+// import { indexOfAll } from './array-practice/task9.js';
+// import { membersOnActiveMeetups } from './array-practice/task10.js';
+
+
 // import { task1Old, task1New } from './es-features/task1';
 // import { task2Old, task2New } from './es-features/task2';
 // import { task3Old, task3New } from './es-features/task3';
@@ -49,6 +61,7 @@
 
 // console.log('task5 old', task5Old(['test', 42], { name: 'foo', val: 7 })); // ['test', 42, 'foo', 7]
 // console.log('task5 new', task5New(['test', 42], { name: 'foo', val: 7 })); // ['test', 42, 'foo', 7]
+// console.log('task5 new', task5New(['test', 42], { objName: 'foo', objValue: 7 })); // ['test', 42, 'foo', 7]
 
 // console.log('=============');
 
