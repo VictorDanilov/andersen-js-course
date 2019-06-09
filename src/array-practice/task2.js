@@ -15,6 +15,15 @@
  * console.log(arrayDiff([1, 2, 3], [1, 2, 4])); -> [3, 4]
  * console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); -> [4, '4']
  */
+
+function arrayDiff(arr1, arr2) {
+  let arr =[...new Set(arr1.concat(arr2))]
+   
+  
+  return arr.filter((elem) => (arr1.indexOf(elem) !== arr2.indexOf(elem)));
+}
+
+
 function arrayDiff(arr1, arr2) {
   let arr = [];
   arr1.forEach(elem => {
