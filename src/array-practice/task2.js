@@ -15,3 +15,12 @@
  * console.log(arrayDiff([1, 2, 3], [1, 2, 4])); -> [3, 4]
  * console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); -> [4, '4']
  */
+export default function(arrayOne, arrayTwo) {
+  const resultOne = arrayOne.filter(
+    elemArrayOne => arrayTwo.find(elemArrayTwo => elemArrayTwo === elemArrayOne) === undefined
+  );
+  const resultTwo = arrayTwo.filter(
+    elemArrayTwo => arrayOne.find(elemArrayOne => elemArrayOne === elemArrayTwo) === undefined
+  );
+  return [...resultOne, ...resultTwo];
+}

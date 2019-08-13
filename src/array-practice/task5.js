@@ -13,3 +13,7 @@
  * generator.next(); -> 'Complete!'
  * generator.next(); -> 'Complete!'
  */
+export default function*(arr) {
+  yield* arr;
+  while (true) yield 'Complete!';
+}

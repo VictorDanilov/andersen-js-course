@@ -14,3 +14,11 @@
  * console.log(any([0, 0, 1, 0])); -> true
  * console.log(any([0, 0, 0, 0])); -> false
  */
+function any(inputArray, argFunction) {
+  if (argFunction === undefined) return true;
+  for (let i of inputArray) {
+    if (argFunction(i) === true) return true;
+  }
+  return false;
+}
+export { any };

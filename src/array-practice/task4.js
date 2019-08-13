@@ -7,3 +7,9 @@
  * console.log(union([5, 1, 2, 3, 3], [4, 3, 2])); -> [5, 1, 2, 3, 4]
  * console.log(union([5, 1, 3, 3, 4], [1, 3, 4])); -> [5, 1, 3, 4]
  */
+export default function(arrayOne, arrayTwo) {
+  const result = [...arrayOne, ...arrayTwo].filter(function(element, index, arr) {
+    return index === arr.indexOf(element);
+  });
+  return result;
+  }
