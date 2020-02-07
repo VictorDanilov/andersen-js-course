@@ -21,4 +21,9 @@ export function task7Old() {
 // Напишите реализацию функции task7Old на ES6+ ниже этого комментария.
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
-export function task7New() {}
+export function task7New() {
+  const obj = { test: 0 };
+  const obj2 = { foo: 1, bar: 2 };
+  Object.assign(obj, obj2);
+  return obj; // obj = {test: 0, foo: 1, bar: 2}
+}

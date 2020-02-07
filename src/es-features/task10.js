@@ -1,18 +1,23 @@
+/* eslint-disable no-console */
 /**
  * Нужно переписать функции-конструкторы на классы
  */
 
-function A(name) {
-  this.name = name;
+class A {
+  constructor(name) {
+    this.name = name;
+  }
 }
 
 A.prototype.getName = function() {
   return this.name;
 };
 
-function B(name, age) {
-  A.call(this, name);
-  this.age = age;
+class B extends A {
+  constructor(name, age) {
+    super(name);
+    this.age = age;
+  }
 }
 
 B.prototype = Object.create(A.prototype);
