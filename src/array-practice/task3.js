@@ -11,3 +11,8 @@
  *
  * forEachRight([1, 2, 3, 4], val => console.log(val)); -> в консоль 4 3 2 1
  */
+// eslint-disable-next-line import/prefer-default-export
+export function forEachRight(arr, callback) {
+  arr.reverse();
+  arr.forEach(callback);
+}
