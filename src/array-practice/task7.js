@@ -11,3 +11,8 @@
  * console.log(take([1, 2, 3], 5)); -> [1, 2, 3]
  * console.log(take([1, 2, 3], 2)); -> [1, 2]
  */
+
+// eslint-disable-next-line import/prefer-default-export
+export function take(arr, count) {
+  return arr.splice(0, count);
+}
