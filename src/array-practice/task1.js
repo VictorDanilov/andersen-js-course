@@ -16,8 +16,4 @@
  */
 
 // eslint-disable-next-line import/prefer-default-export
-export function task1Any(arr, even) {
-  // eslint-disable-next-line eqeqeq
-  if (even === undefined) return arr.some(x => x == true);
-  return arr.some(even);
-}
+export const task1Any = (arr, even = Boolean) => arr.some(even);

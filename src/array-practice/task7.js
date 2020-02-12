@@ -13,6 +13,4 @@
  */
 
 // eslint-disable-next-line import/prefer-default-export
-export function take(arr, count) {
-  return arr.splice(0, count);
-}
+export const take = (arr, count) => arr.slice(0, count);

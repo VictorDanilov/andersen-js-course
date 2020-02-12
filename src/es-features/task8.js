@@ -32,7 +32,7 @@ export function task8New() {
   const obj = {
     nums: [0, 2, 5, 10, 15],
     fives: [],
-    calculateNumsFive: function() {
+    calculateNumsFive() {
       this.fives = this.nums.filter(value => value % 5 === 0);
       return this.fives;
     },

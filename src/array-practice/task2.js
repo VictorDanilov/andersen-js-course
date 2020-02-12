@@ -20,5 +20,5 @@
 export function arrayDiff(arr1, arr2) {
   const rez1 = arr1.filter(item => !arr2.includes(item));
   const rez2 = arr2.filter(item => !arr1.includes(item));
-  return rez1.concat(rez2);
+  return [...rez1, ...rez2];
 }

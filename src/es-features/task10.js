@@ -20,18 +20,18 @@ class B extends A {
   }
 
   getName(text) {
-    return super.getName() + ' ' + text;
+    return `${super.getName()} ${text}`;
   }
 
   getAge() {
     return this.age;
   }
 
-  get function() {
+  get color() {
     return this._color;
   }
 
-  set function(color) {
+  set color(color) {
     this._color = color;
   }
 
@@ -40,6 +40,7 @@ class B extends A {
   }
 }
 
+// eslint-disable-next-line import/prefer-default-export
 export function task10Old() {
   var b = new B('Max', 12);
   console.log(b.getName('Best')); // Max Best
@@ -55,4 +56,4 @@ export function task10Old() {
 // Изменить тело функции task10Old, написав task10New, где заиспользуете
 // класс так, как использовалась функция-конструктор B в task10Old
 
-export function task10New() {}
+// export function task10New() {}
