@@ -1,20 +1,22 @@
 ﻿﻿/**
- * Функция принимает имя полей (строкой), если поле не найденно то должно вернуться false.
+ * Функция принимает объект и ключ-строку.
+ * Если в объекте по ключу будет значение null или undefined, то нужно вернуть false.
+ * Если какое-либо другое значение, то нужно вернуть это значение.
  *
  * Пример вызова
- * console.log(task11Old('isBestField')); -> true
- * console.log(task11Old('isBestField1')); -> false
+ * console.log(task11Old({a: 0}, 'a')); -> 0
+ * console.log(task11Old({a: 1}, 'a')); -> 1
+ * console.log(task11Old({a: null}, 'a')); -> false
+ * console.log(task11Old({}, 'a')); -> false
+ * console.log(task11Old({a: ''}, 'a')); -> ''
  */
 
-export function task11Old(fieldName) {
-  var myObject = {
-    isBestField: true
-  }
-  
-  return myObject[fieldName] || false;
+export function task11Old(obj, fieldName) {
+  return obj[fieldName] == null ? false : obj[fieldName];
 }
 
 // Напишите реализацию функции task11Old на ESnext ниже этого комментария.
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
-export function task11New() {}
+export function task11New() {
+}
