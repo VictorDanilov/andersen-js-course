@@ -9,7 +9,7 @@
  * console.log(task12Old({ obj2: { some: true }}, 'obj2', 'some' )); -> true
  * console.log(task12Old(null, 'obj2', 'some' )); -> undefined
  * console.log(task12Old({ obj2: { some: true }}, 'obj2', 'some2' )); -> undefined
- * console.log(task12Old({ obj3: { some: true }}, 'obj3', 'some' )); -> undefined
+ * console.log(task12Old({ obj3: { some: true }}, 'obj2', 'some' )); -> undefined
  */
 
 export function task12Old(object, firstFieldName, secondFieldName) {
