@@ -7,3 +7,10 @@
  * console.log(union([5, 1, 2, 3, 3], [4, 3, 2])); -> [5, 1, 2, 3, 4]
  * console.log(union([5, 1, 3, 3, 4], [1, 3, 4])); -> [5, 1, 3, 4]
  */
+
+export const union = (arr1, arr2) => new Set([...arr1, ...arr2]);
+
+console.log('union 1 :>> ', union([5, 1, 2, 3, 3], [4, 3, 2]));
+console.log('union 2 :>> ', union([5, 1, 3, 3, 4], [1, 3, 4]));
+
+export default union;

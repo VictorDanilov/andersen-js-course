@@ -15,3 +15,14 @@
  * console.log(arrayDiff([1, 2, 3], [1, 2, 4])); -> [3, 4]
  * console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); -> [4, '4']
  */
+
+export const arrayDiff = (arr1, arr2) => {
+  const unique1 = arr1.filter((v) => arr2.indexOf(v) === -1);
+  const unique2 = arr2.filter((v) => arr1.indexOf(v) === -1);
+  return [...unique1, ...unique2];
+};
+
+console.log('arrayDiff 1 :>> ', arrayDiff([1, 2, 3], [1, 2, 4]));
+console.log('arrayDiff 2 :>> ', arrayDiff([1, 3, 3, 4], [1, 3, '4']));
+
+export default arrayDiff;

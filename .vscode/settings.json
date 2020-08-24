@@ -1,0 +1,26 @@
+{
+  "workbench.tree.indent": 20,
+  "cSpell.language": "en, ru",
+  "editor.minimap.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "on",
+  "explorer.compactFolders": false,
+
+  "explorer.confirmDelete": true,
+  "explorer.confirmDragAndDrop": true,
+
+  "files.eol": "\n",
+
+  "cSpell.words": [
+    "Nums",
+    "Колбек",
+    "Раскомментировать",
+    "встрелились",
+    "вызова",
+    "дефаултные",
+    "дефаултный",
+    "дефолтное",
+    "дефолтными",
+    "объедененных"
+  ]
+}

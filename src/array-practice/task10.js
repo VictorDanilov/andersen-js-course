@@ -18,3 +18,17 @@
 // ];
 
 // function membersOnActiveMeetups(meetups) {}
+
+export const membersOnActiveMeetups = (meetups) =>
+  meetups.reduce((acc, cur) => (cur.isActive ? acc + cur.members : acc), 0);
+
+const meetups = [
+  { name: 'JavaScript', isActive: true, members: 100 },
+  { name: 'Angular', isActive: true, members: 900 },
+  { name: 'Node', isActive: false, members: 600 },
+  { name: 'React', isActive: true, members: 500 },
+];
+
+console.log('membersOnActiveMeetups(meetups) :>> ', membersOnActiveMeetups(meetups));
+
+export default membersOnActiveMeetups;

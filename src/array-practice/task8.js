@@ -11,3 +11,11 @@
  * console.log(without([2, 1, 2, 3], 1, 2)) -> [3]
  * console.log(without([2, 1, 10, 20], 1, 2)) -> [10, 20]
  */
+
+// Решение по аналогии с алгоритмом таск №2, фильтруем уникальные значения
+export const without = (arr, ...arg) => arr.filter((v) => arg.indexOf(v) === -1);
+
+console.log(without([2, 1, 2, 3], 1, 2));
+console.log(without([2, 1, 10, 20], 1, 2));
+
+export default without;

@@ -11,3 +11,11 @@
  * console.log(take([1, 2, 3], 5)); -> [1, 2, 3]
  * console.log(take([1, 2, 3], 2)); -> [1, 2]
  */
+
+export const take = (arr, endIndex, startIndex = 0) => arr.slice(startIndex, endIndex);
+
+console.log(take([1, 2, 3], 5));
+console.log(take([1, 2, 3], 2));
+console.log(take([1, 2, 3], 2, 1)); // это бонус, возможность выбора в диапазоне
+
+export default take;
