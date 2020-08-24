@@ -10,3 +10,13 @@
  * console.log(indexOfAll([1, 2, 3, 1, 2, 3], 1)); -> [0, 3]
  * console.log(indexOfAll([1, 2, 3], 4)); -> []
  */
+
+export const indexOfAll = ((array,value) => {
+    let result = [];
+     array.forEach( (item,index) => {
+       if( item === value){
+        result.push(index); 
+       };
+     });
+    return result.length === 0 ? [] : result;
+});

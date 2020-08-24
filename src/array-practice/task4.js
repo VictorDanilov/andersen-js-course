@@ -7,3 +7,7 @@
  * console.log(union([5, 1, 2, 3, 3], [4, 3, 2])); -> [5, 1, 2, 3, 4]
  * console.log(union([5, 1, 3, 3, 4], [1, 3, 4])); -> [5, 1, 3, 4]
  */
+export const union = (() => {
+    let result = [...firstArr,...secondArr];
+    return Array.from(new Set(result));
+ });

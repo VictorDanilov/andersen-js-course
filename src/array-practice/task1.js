@@ -14,3 +14,17 @@
  * console.log(any([0, 0, 1, 0])); -> true
  * console.log(any([0, 0, 0, 0])); -> false
  */
+
+export const any = ((array,callback) => {
+	let checkArr = array.reduce( (sum,nextElem) => sum += nextElem, 0);
+    if( checkArr === 0){
+      return false;
+    };
+
+	if(callback == undefined){
+		return true;
+	};
+
+   let lengthOfRight = array.filter( (elem) => callback(elem));
+   return lengthOfRight >= 1 ? true : false;
+});
