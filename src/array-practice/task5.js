@@ -18,8 +18,10 @@
 
 const createGenerator = (arr) => {
     let count = 0
-    return function(){
-        console.log(arr[count] ? arr[count] : 'Complete!')
-        count++
+    return {
+        next(){
+            console.log(arr[count] || 'Complete')
+            count++
+        }
     }
 }
