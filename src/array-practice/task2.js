@@ -15,3 +15,6 @@
  * console.log(arrayDiff([1, 2, 3], [1, 2, 4])); -> [3, 4]
  * console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); -> [4, '4']
  */
+
+export const arrayDiff = (arr1 , arr2) => [...arr1.filter(a => arr2.indexOf(a) !== -1) , ...arr2.filter(a => arr1.indexOf(a) !== -1)]
+

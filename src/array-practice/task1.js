@@ -14,3 +14,15 @@
  * console.log(any([0, 0, 1, 0])); -> true
  * console.log(any([0, 0, 0, 0])); -> false
  */
+
+const any = (array, cb) => {
+    if (array.filter(Boolean).length !== 0) {
+        if (cb) {
+            return !!array.filter(a => cb(a) === true).length;
+        }
+
+        return true;
+    }
+    
+    return false;
+};

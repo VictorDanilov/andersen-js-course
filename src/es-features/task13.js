@@ -12,4 +12,4 @@ export function task13Old(arr) {
 // Напишите реализацию функции task13Old на ESnext ниже этого комментария.
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
-export function task13New() {}
+export const task13New  = arr => arr.flat()

@@ -15,3 +15,11 @@
  * generator.next(); -> 'Complete!'
  * generator.next(); -> 'Complete!'
  */
+
+const createGenerator = (arr) => {
+    let count = 0
+    return function(){
+        console.log(arr[count] ? arr[count] : 'Complete!')
+        count++
+    }
+}

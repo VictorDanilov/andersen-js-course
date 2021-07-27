@@ -13,4 +13,4 @@ export function task14Old(obj) {
 // Напишите реализацию функции task14Old на ESnext ниже этого комментария.
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
-export function task14New() {}
+export const task14New = obj => Object.entries(obj)
