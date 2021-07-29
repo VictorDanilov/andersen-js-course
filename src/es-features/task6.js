@@ -39,8 +39,9 @@ const task6New = () => {
   }
 
   const tmp = userModule();
-  const {name , value , role , isActive = false} = tmp
-  
-  return [name, value, role, isActive]
+  const {name , value , role , isActive = false , cases} = tmp
+  const firstField = cases[0].id
+
+  return [name, value, role, isActive , firstField]
 }
 //not done

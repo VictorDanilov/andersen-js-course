@@ -31,9 +31,8 @@ export function task8Old() {
 export const task8New = () => {
   var obj = {
     nums: [0, 2, 5, 10, 15],
-    fives: [],
     calculateNumsFive() {
-      this.fives = this.nums.filter(a => a % 5 === 0)
+      return this.nums.filter(a => a % 5 === 0)
 
       return this.fives;
     },
