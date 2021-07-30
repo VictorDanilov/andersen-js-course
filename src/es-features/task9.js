@@ -17,4 +17,9 @@ export function task9Old() {
 // Напишите реализацию функции task9Old на ES6+ ниже этого комментария.
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
-export function task9New() {}
+export function task9New() {
+  const result = 'test'.indexOf('est') !== -1;
+  const findResult = [22, 1, 90, 70].filter(x => x < 3)[0];
+
+  return [result, findResult];
+}
