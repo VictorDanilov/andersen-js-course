@@ -14,3 +14,14 @@
  * console.log(any([0, 0, 1, 0])); -> true
  * console.log(any([0, 0, 0, 0])); -> false
  */
+
+// export function an4y(arr, callback) {
+//   if (callback) {
+//     return arr.some(item => callback(item));
+//   }
+//   return arr.some(item => Boolean(item));
+// }
+
+export default function any(arr, callback = Boolean) {
+  return arr.some(item => callback(item));
+}
