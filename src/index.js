@@ -16,7 +16,7 @@
  * Для задач на array-practice импортируйте написанные функции сюда и проверяйте их работу тут.
  */
 
-// import { task1Old, task1New } from './es-features/task1';
+import { task1Old, task1New } from './es-features/task1';
 // import { task2Old, task2New } from './es-features/task2';
 // import { task3Old, task3New } from './es-features/task3';
 // import { task4Old, task4New } from './es-features/task4';
@@ -33,8 +33,8 @@
 // import { task15Old, task15New } from './es-features/task15';
 
 
-// console.log('task1 old', task1Old(10) === 500); // true
-// console.log('task1 new', task1New(10) === 500); // true
+console.log('task1 old', task1Old(10) === 500); // true
+console.log('task1 new', task1New(10) === 500); // true
 
 // console.log('=============');
 
