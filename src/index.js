@@ -26,7 +26,7 @@ import { task3Old, task3New } from './es-features/task3';
 // import { task8Old, task8New } from './es-features/task8';
 // import { task9Old, task9New } from './es-features/task9';
 // import { task10Old, task10New } from './es-features/task10';
-// import { task11Old, task11New } from './es-features/task11';
+import { task11Old, task11New } from './es-features/task11';
 // import { task12Old, task12New } from './es-features/task12';
 // import { task13Old, task13New } from './es-features/task13';
 // import { task14Old, task14New } from './es-features/task14';
@@ -83,8 +83,8 @@ console.log('task3 new', task3New(['hello', 'test', 12])); // [ 1, 2, 'hello', '
 
 // console.log('=============');
 
-// console.log('task11 old', task11Old({a: null}, 'a')); // false
-// console.log('task11 new', task11New({a: null}, 'a')); // false
+console.log('task11 old', task11Old({ a: null }, 'a')); // false
+console.log('task11 new', task11New({ a: null }, 'a')); // false
 
 // console.log('=============');
 
