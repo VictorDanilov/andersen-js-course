@@ -18,7 +18,7 @@
 
 import { task1Old, task1New } from './es-features/task1';
 import { task2Old, task2New } from './es-features/task2';
-// import { task3Old, task3New } from './es-features/task3';
+import { task3Old, task3New } from './es-features/task3';
 // import { task4Old, task4New } from './es-features/task4';
 // import { task5Old, task5New } from './es-features/task5';
 // import { task6Old, task6New } from './es-features/task6';
@@ -41,10 +41,10 @@ console.log('=============');
 console.log('task2 old', task2Old(1, 2, 'test', false, 'new', 'best') === 12); // true
 console.log('task2 new', task2New(1, 2, 'test', false, 'new', 'best') === 12); // true
 
-// console.log('=============');
+console.log('=============');
 
-// console.log('task3 old', task3Old(['hello', 'test', 12])); // [ 1, 2, 'hello', 'test', 12 ]
-// console.log('task3 new', task3New(['hello', 'test', 12])); // [ 1, 2, 'hello', 'test', 12 ]
+console.log('task3 old', task3Old(['hello', 'test', 12])); // [ 1, 2, 'hello', 'test', 12 ]
+console.log('task3 new', task3New(['hello', 'test', 12])); // [ 1, 2, 'hello', 'test', 12 ]
 
 // console.log('=============');
 
