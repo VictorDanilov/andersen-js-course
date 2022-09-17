@@ -31,7 +31,7 @@ import { task10Old, task10New } from './es-features/task10';
 // import { task13Old, task13New } from './es-features/task13';
 // import { task14Old, task14New } from './es-features/task14';
 // import { task15Old, task15New } from './es-features/task15';
-
+import { any } from './array-practice/task1.js';
 
 // console.log('task1 old', task1Old(10) === 500); // true
 // console.log('task1 new', task1New(10) === 500); // true
@@ -78,8 +78,8 @@ import { task10Old, task10New } from './es-features/task10';
 
 // console.log('=============');
 
-console.log('task10 old', task10Old()); // {name: 'Max', age: 12, color: red}
-console.log('task10 new', task10New()); // {name: 'Max', age: 12, color: red}
+// console.log('task10 old', task10Old()); // {name: 'Max', age: 12, color: red}
+// console.log('task10 new', task10New()); // {name: 'Max', age: 12, color: red}
 
 // console.log('=============');
 
@@ -107,3 +107,7 @@ console.log('task10 new', task10New()); // {name: 'Max', age: 12, color: red}
 // console.log('task15 new', task15New([['a', 1], ['b', 2]])); // {a: 1, b: 2}
 
 // console.log('=============');
+
+console.log(any([0, 1, 2, 0], x => x >= 2)); // -> true
+console.log(any([0, 0, 1, 0])); //-> true
+console.log(any([0, 0, 0, 0])); //-> false
