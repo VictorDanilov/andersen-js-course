@@ -6,7 +6,7 @@ function A(name) {
   this.name = name;
 }
 
-A.prototype.getName = function() {
+A.prototype.getName = function () {
   return this.name;
 };
 
@@ -18,23 +18,23 @@ function B(name, age) {
 B.prototype = Object.create(A.prototype);
 B.prototype.constructor = B;
 
-B.prototype.getName = function(text) {
+B.prototype.getName = function (text) {
   return A.prototype.getName.call(this) + ' ' + text;
 };
 
-B.prototype.getAge = function() {
+B.prototype.getAge = function () {
   return this.age;
 };
 
-B.defaultUser = function() {
+B.defaultUser = function () {
   return new B('test', 0);
 };
 
 Object.defineProperty(B.prototype, 'color', {
-  get: function() {
+  get: function () {
     return this._color;
   },
-  set: function(color) {
+  set: function (color) {
     this._color = color;
   },
 });
@@ -54,4 +54,49 @@ export function task10Old() {
 // Изменить тело функции task10Old, написав task10New, где заиспользуете
 // класс так, как использовалась функция-конструктор B в task10Old
 
-export function task10New() {}
+class NewA {
+  constructor(name) {
+    this.name = name;
+  }
+
+  getName() {
+    return this.name;
+  }
+}
+
+class NewB extends NewA {
+  constructor(name, age) {
+    super(name);
+    this.age = age;
+  }
+
+  getName(text) {
+    return `${super.getName()} ${text}`;
+  }
+
+  getAge() {
+    return this.age;
+  }
+
+  static defaultUser() {
+    return new NewB('test', 0);
+  }
+
+  get color() {
+    return this._color;
+  }
+
+  set color(color) {
+    this._color = color;
+  }
+}
+
+export const task10New = () => {
+  const b = new NewB('Max', 12);
+  console.log(b.getName('Best'));
+  console.log(b.getAge());
+  console.log(NewB.defaultUser());
+  b.color = 'red';
+  console.log(b.color);
+  return b;
+};
