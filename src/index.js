@@ -29,8 +29,8 @@
 // import { task11Old, task11New } from './es-features/task11';
 // import { task12Old, task12New } from './es-features/task12';
 // import { task13Old, task13New } from './es-features/task13';
-import { task14Old, task14New } from './es-features/task14';
-// import { task15Old, task15New } from './es-features/task15';
+// import { task14Old, task14New } from './es-features/task14';
+import { task15Old, task15New } from './es-features/task15';
 // import { any } from './array-practice/task1';
 // import { arrayDiff } from './array-practice/task2';
 // import { forEachRight } from './array-practice/task3';
@@ -107,13 +107,13 @@ import { task14Old, task14New } from './es-features/task14';
 
 // console.log('=============');
 
-console.log('task14 old', task14Old({ a: 10, b: 55, c: 3 })); // [["a", 10], ["b", 55], ["c", 3]]
-console.log('task14 new', task14New({ a: 10, b: 55, c: 3 })); // [["a", 10], ["b", 55], ["c", 3]]
+// console.log('task14 old', task14Old({ a: 10, b: 55, c: 3 })); // [["a", 10], ["b", 55], ["c", 3]]
+// console.log('task14 new', task14New({ a: 10, b: 55, c: 3 })); // [["a", 10], ["b", 55], ["c", 3]]
 
 // console.log('=============');
 
-// console.log('task15 old', task15Old([['a', 1], ['b', 2]])); // {a: 1, b: 2}
-// console.log('task15 new', task15New([['a', 1], ['b', 2]])); // {a: 1, b: 2}
+console.log('task15 old', task15Old([['a', 1], ['b', 2]])); // {a: 1, b: 2}
+console.log('task15 new', task15New([['a', 1], ['b', 2]])); // {a: 1, b: 2}
 
 // console.log('=============');
 
