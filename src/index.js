@@ -27,10 +27,10 @@
 // import { task9Old, task9New } from './es-features/task9';
 // import { task10Old, task10New } from './es-features/task10';
 // import { task11Old, task11New } from './es-features/task11';
-// import { task12Old, task12New } from './es-features/task12';
+import { task12Old, task12New } from './es-features/task12';
 // import { task13Old, task13New } from './es-features/task13';
 // import { task14Old, task14New } from './es-features/task14';
-import { task15Old, task15New } from './es-features/task15';
+// import { task15Old, task15New } from './es-features/task15';
 // import { any } from './array-practice/task1';
 // import { arrayDiff } from './array-practice/task2';
 // import { forEachRight } from './array-practice/task3';
@@ -97,8 +97,8 @@ import { task15Old, task15New } from './es-features/task15';
 
 // console.log('=============');
 
-// console.log('task12 old', task12Old({ obj2: { some: true } }, 'obj2', 'some2')); // undefined
-// console.log('task12 new', task12New({ obj2: { some: true } }, 'obj2', 'some2')); // undefined
+console.log('task12 old', task12Old({ obj2: { some: true } }, 'obj2', 'some2')); // undefined
+console.log('task12 new', task12New({ obj2: { some: true } }, 'obj2', 'some2')); // undefined
 
 // console.log('=============');
 
@@ -112,8 +112,8 @@ import { task15Old, task15New } from './es-features/task15';
 
 // console.log('=============');
 
-console.log('task15 old', task15Old([['a', 1], ['b', 2]])); // {a: 1, b: 2}
-console.log('task15 new', task15New([['a', 1], ['b', 2]])); // {a: 1, b: 2}
+// console.log('task15 old', task15Old([['a', 1], ['b', 2]])); // {a: 1, b: 2}
+// console.log('task15 new', task15New([['a', 1], ['b', 2]])); // {a: 1, b: 2}
 
 // console.log('=============');
 
