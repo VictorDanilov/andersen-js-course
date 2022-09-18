@@ -34,6 +34,7 @@
 // import { any } from './array-practice/task1';
 // import { arrayDiff } from './array-practice/task2';
 // import { forEachRight } from './array-practice/task3';
+import { membersOnActiveMeetups } from './array-practice/task10';
 import { union } from './array-practice/task4';
 import { createGenerator } from './array-practice/task5';
 import { transformArrayToNumber } from './array-practice/task6';
@@ -163,7 +164,16 @@ import { indexOfAll } from './array-practice/task9';
 // console.log(without([2, 1, 2, 3], 1, 2)); // -> [3]
 // console.log(without([2, 1, 10, 20], 1, 2)); // -> [10, 20]
 
+// console.log(indexOfAll([1, 2, 3, 1, 2, 3], 1)); // -> [0, 3]
+// console.log(indexOfAll([1, 2, 3], 4)); // -> []
+
 // console.log('=============');
 
-console.log(indexOfAll([1, 2, 3, 1, 2, 3], 1)); // -> [0, 3]
-console.log(indexOfAll([1, 2, 3], 4)); // -> []
+const meetups = [
+  { name: 'JavaScript', isActive: true, members: 100 },
+  { name: 'Angular', isActive: true, members: 900 },
+  { name: 'Node', isActive: false, members: 600 },
+  { name: 'React', isActive: true, members: 500 },
+];
+
+console.log(membersOnActiveMeetups(meetups)); // 1500
