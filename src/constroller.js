@@ -3,6 +3,7 @@ class Controller {
     this.model = model;
     this.view = view;
     view.on('check', this.checkItems.bind(this));
+    console.log('jija');
   }
 
   checkItems(val) {
