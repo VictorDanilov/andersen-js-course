@@ -1,0 +1,88 @@
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('../assets/brown-texture.jpg');
+  height: 100%;
+}
+.appWrapper {
+  display: flex;
+  margin: 0 auto;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0%;
+}
+.items-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  margin-right: 300px;
+  grid-gap: 1px;
+}
+.items-list__item {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  list-style: none;
+  border: black 1px solid;
+  align-items: center;
+  cursor: pointer;
+}
+.items-list__item:hover {
+  transform: translateY(5px);
+}
+.item_wrapper_img {
+  width: 50px;
+  height: 50px;
+}
+.slot1 {
+  width: 200px;
+  height: 200px;
+  border: red 5px solid;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.slot2 {
+  width: 200px;
+  height: 200px;
+  border: red 5px solid;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.craftingTable {
+  display: flex;
+}
+.craft {
+  text-align: center;
+}
+.craftBtn {
+  margin-top: 50px;
+}
+.title {
+  color: pink;
+  border: 1px black solid;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 50px;
+}
+.made {
+  text-align: center;
+}
+.combinedItem {
+  text-align: center;
+  height: 100px;
+  width: 100px;
+  border: red 1px solid;
+  margin: 0 auto;
+}
+.combinedItem {
+  width: 200px;
+  height: 200px;
+}
+.craftImg {
+  width: 150px;
+  height: 150px;
+}
