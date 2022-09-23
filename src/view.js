@@ -20,13 +20,18 @@ class View extends EventEmitter {
 
     this.itemSlots.ondragover = this.allowDrop;
     this.button = document.getElementById('craftBtn');
+    this.addToInvButton = document.getElementById('addToInventory');
+    this.addToInvButton.addEventListener('click', this.handleAddToInventory.bind(this));
+
+    this.discardButton = document.getElementById('discardItem');
+
     this.button.addEventListener('click', this.handleClick.bind(this));
 
-    this.craftetItem = document.getElementById('crafted');
+    this.craftedItem = document.getElementById('crafted');
   }
 
   allowDrop(ev) {
-    ev.preventDefault();
+    return ev.preventDefault();
   }
 
   drag(ev) {
@@ -37,20 +42,24 @@ class View extends EventEmitter {
   drop(ev) {
     ev.preventDefault();
     const data = ev.dataTransfer.getData('text');
-    const original = document.getElementById(`${data}`);
+    const original = document.getElementById(data);
     const copyimg = original.cloneNode(true);
     ev.target.appendChild(copyimg);
   }
 
   handleClick(event) {
     event.preventDefault();
-    console.log(this.slot1);
     const idItem1 = this.slot1.getElementsByClassName('items-list__item')[0].getAttribute('id');
     const idItem2 = this.slot2.getElementsByClassName('items-list__item')[0].getAttribute('id');
-    console.log(idItem1, idItem2);
     this.emit('check', [idItem1, idItem2]);
     this.slot1.innerHTML = '';
     this.slot2.innerHTML = '';
+  }
+
+  handleAddToInventory(event) {
+    event.preventDefault();
+    const createdItem = document.getElementById('crafted');
+    console.log(createdItem.childNodes[0]);
   }
 }
 

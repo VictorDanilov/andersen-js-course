@@ -1,12 +1,18 @@
-import items from './items';
+import { items, recipes, inventory } from './items';
 
 class Model {
-  constructor(state = items) {
-    this.state = state;
+  constructor() {
+    this.items = items;
+    this.recipes = recipes;
+    this.inventoryItems = inventory;
+  }
+
+  addItemToInventory(item) {
+    return this.inventoryItems.push(item);
   }
 
   getItem(id) {
-    return this.state.find(item => item.id === id);
+    return this.items.find(item => item.id === id);
   }
 
   addItem(item) {
