@@ -68,6 +68,8 @@
           <div class="slot2" id="slot2"></div>
         </div>
         <button class="craftBtn" id="craftBtn">Craft</button>
+        <span style="color:white">or</span>
+        <button class="craftBtn" id="recBtn">Make your own recepie</button>
       </div>
     </div>
     <h2 class="made">made item</h2>
@@ -79,6 +81,32 @@
       <button id="addToInventory">add To Inventory</button>
       <button id="discardItem">discard Item</button>
     </div>
+    <div class="trashCan" id="trashCan">
+      trashCan mb
+      <img src="https://freesvg.org/img/trash.png" style="width: 100px; height: 100px;;" alt="" />
+    </div>
     <div class="inventory" id="inventory">Inventory is empty</div>
+
+    <div class="modal" id="modal">
+      <form action="submit" style="color: white;">
+        <label for="">
+          name
+          <input type="text" name="name" id="name" />
+        </label>
+        <br />
+        <label for="">
+          id
+          <input type="text" name="id" id="id" />
+        </label>
+        <br />
+        <label for="">
+          url
+          <input type="text" name="url" id="url" />
+        </label>
+        <br />
+        <button type="submit" id="createNewRec">create recepie</button>
+        <button type="button" id="close">X</button>
+      </form>
+    </div>
   </body>
 </html>

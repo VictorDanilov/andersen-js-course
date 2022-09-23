@@ -30,5 +30,9 @@ class Model {
       this.state.splice(index, 1);
     }
   }
+
+  addNewRecepie(obj) {
+    return this.recipes.push(obj);
+  }
 }
 export default Model;

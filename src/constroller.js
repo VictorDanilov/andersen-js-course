@@ -5,6 +5,7 @@ class Controller {
     view.on('check', this.checkItems.bind(this));
     view.on('addToInventory', this.addToInventory.bind(this));
     view.on('resetCraftedItem', this.resetCraftedItem.bind(this));
+    view.on('createRecepie', this.createNewRecepie.bind(this));
   }
 
   checkItems(val) {
@@ -26,12 +27,9 @@ class Controller {
     this.model.addItemToInventory(item.src);
 
     this.view.inventory.innerHTML = '';
-    this.model
-      .getInventory()
-      .forEach(
-        el =>
-          (this.view.inventory.innerHTML += `<img style="width: 200px; height:160px" src=${el} />`)
-      );
+    this.model.getInventory().forEach(el => {
+      this.view.inventory.innerHTML += `<img style="width: 200px; height:160px" src=${el} class="inventoryItem" draggable="true"/>`;
+    });
   }
 
   resetCraftedItem(item) {
@@ -40,6 +38,17 @@ class Controller {
     } else {
       alert('crafted item not found');
     }
+  }
+
+  createNewRecepie(recepie) {
+    const newRec = {
+      name: recepie[2],
+      ingridientsId: [recepie[0], recepie[1]],
+      itemId: recepie[3],
+      urlImg: recepie[4],
+    };
+    this.model.addNewRecepie(newRec);
+    this.view.modal.style.display = 'none';
   }
 }
 
