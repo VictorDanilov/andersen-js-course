@@ -11,6 +11,10 @@ class Model {
     return this.inventoryItems.push(item);
   }
 
+  getInventory() {
+    return this.inventoryItems;
+  }
+
   getItem(id) {
     return this.items.find(item => item.id === id);
   }

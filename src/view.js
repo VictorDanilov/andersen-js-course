@@ -22,6 +22,7 @@ class View extends EventEmitter {
     this.button = document.getElementById('craftBtn');
     this.addToInvButton = document.getElementById('addToInventory');
     this.addToInvButton.addEventListener('click', this.handleAddToInventory.bind(this));
+    this.inventory = document.getElementById('inventory');
 
     this.discardButton = document.getElementById('discardItem');
 
@@ -58,8 +59,8 @@ class View extends EventEmitter {
 
   handleAddToInventory(event) {
     event.preventDefault();
-    const createdItem = document.getElementById('crafted');
-    console.log(createdItem.childNodes[0]);
+    const createdItem = document.getElementById('craftedItem');
+    this.emit('addToInventory', createdItem);
   }
 }
 
