@@ -4,6 +4,7 @@ class Controller {
     this.view = view;
     view.on('check', this.checkItems.bind(this));
     view.on('addToInventory', this.addToInventory.bind(this));
+    view.on('resetCraftedItem', this.resetCraftedItem.bind(this));
   }
 
   checkItems(val) {
@@ -22,9 +23,8 @@ class Controller {
   }
 
   addToInventory(item) {
-    console.log(item.src);
     this.model.addItemToInventory(item.src);
-    console.log(this.model.getInventory());
+
     this.view.inventory.innerHTML = '';
     this.model
       .getInventory()
@@ -32,6 +32,14 @@ class Controller {
         el =>
           (this.view.inventory.innerHTML += `<img style="width: 200px; height:160px" src=${el} />`)
       );
+  }
+
+  resetCraftedItem(item) {
+    if (item) {
+      this.view.craftedItem.innerHTML = '';
+    } else {
+      alert('crafted item not found');
+    }
   }
 }
 
