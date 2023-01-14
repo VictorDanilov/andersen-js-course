@@ -1,3 +1,5 @@
+import './styles/main.css';
+
 /**
  * При запуске приложения через yarn start,
  * этот файл будет исполняться автоматически при его редактировании
@@ -31,7 +33,6 @@
 // import { task13Old, task13New } from './es-features/task13';
 // import { task14Old, task14New } from './es-features/task14';
 // import { task15Old, task15New } from './es-features/task15';
-
 
 // console.log('task1 old', task1Old(10) === 500); // true
 // console.log('task1 new', task1New(10) === 500); // true

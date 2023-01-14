@@ -1,4 +1,8 @@
 {
+  "parser": "@babel/eslint-parser",
+  "env": {
+    "browser": true
+  },
   "extends": ["airbnb-base", "prettier"],
   "plugins": ["prettier"],
   "rules": {
@@ -11,6 +15,7 @@
     "vars-on-top": "off",
     "prefer-destructuring": "off",
     "func-names": "off",
-    "no-underscore-dangle": "off"
+    "no-underscore-dangle": "off",
+    "no-console": "warn"
   }
 }
