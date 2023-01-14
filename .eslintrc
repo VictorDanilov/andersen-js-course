@@ -14,6 +14,7 @@
     "prefer-template": "off",
     "vars-on-top": "off",
     "prefer-destructuring": "off",
+    "prefer-arrow-callback": "off",
     "func-names": "off",
     "no-underscore-dangle": "off",
     "no-console": "warn"

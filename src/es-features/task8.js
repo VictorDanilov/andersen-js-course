@@ -10,9 +10,9 @@ export function task8Old() {
   var obj = {
     nums: [0, 2, 5, 10, 15],
     fives: [],
-    calculateNumsFive: function() {
+    calculateNumsFive: function () {
       var self = this;
-      this.nums.forEach(function(v) {
+      this.nums.forEach(function (v) {
         if (v % 5 === 0) {
           self.fives.push(v);
         }
