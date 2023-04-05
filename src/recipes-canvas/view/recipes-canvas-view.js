@@ -4,11 +4,12 @@ export class RecipesCanvasView extends View {
     constructor(element) {
         super(element)
     }
-    render(data) {
-        console.log(data)
+    render({type, payload}) {
+        if(type !== 'RECIPES_MODEL') return;
+        console.log(payload)
             const all = this.element.querySelectorAll('p');
             all.forEach(elem => elem.remove())
-        data.forEach(recipe => {
+        payload.forEach(recipe => {
 
             const p = document.createElement('p');
             p.innerText = recipe.title;

@@ -11,11 +11,11 @@ export class CreateRecipeModel extends Model {
     open() {
 
         this.isOpen = true;
-        this.observer.broadcastData({isOpen: this.isOpen})
+        this.observer.broadcastData({type: 'CREATE_MODEL', payload: this.isOpen})
     }
     close() {
         this.isOpen = false;
-        this.observer.broadcastData({isOpen: this.isOpen})        
+        this.observer.broadcastData({type: 'CREATE_MODEL', payload: this.isOpen})        
     }
     writeTitle(value) {
         this.title = value;

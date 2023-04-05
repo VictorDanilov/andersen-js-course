@@ -1,30 +1,27 @@
-import { CreateRecipeModel } from "../create-recipe-modal";
-import { CreateRecipeController } from "../create-recipe-modal";
-import { MyEventEmitter, Observer } from "../utilits";
-import { RecipesCanvasController, RecipesCanvasView } from "../recipes-canvas";
-import { CreateRecipeView } from "../create-recipe-modal";
-import { RecipesCanvasModel } from "../recipes-canvas/model/recipes-canvas-model";
+import { AppLocalStorage, MyEventEmitter, Observer } from "../utilits";
+import { CreateRecipeModule } from "../create-recipe-modal/module/create-recipe-module";
+import { RecipesCanvasModule } from "../recipes-canvas/module/recipes-canvas-module";
 /* Контроллеры взаимодействуют между собой через ИвентЭмиттер */
 /* Контроллеры работают с интерфейсом моделей */
 /* Модели взаимодействуют с представлениями через патерн наблюдатель */
 export default class App {
     constructor() {
         /* Инициализация приложения */
+        this.appObserver = new Observer();
         this.eventEmitter = new MyEventEmitter();
-        this.modal = document.querySelector('.create-recipe-modal');
-        this.recipesWrapper = document.querySelector('.recipes-canvas');
+        this.appLocalStorage = new AppLocalStorage
         /* Холст со списком рецептов */
-        this.recipesView = new RecipesCanvasView(this.recipesWrapper);
-        this.recipesCanvasObserver = new Observer([this.recipesView]);
-        this.recipesModel = new RecipesCanvasModel(this.recipesCanvasObserver);
-        this.recipesController = new RecipesCanvasController(this.recipesWrapper, this.recipesModel);
+        this.recipesModule = new RecipesCanvasModule(this.appObserver);
         /* Модальное окно создания нового рецепта */
-        this.createRecipeView = new CreateRecipeView(this.modal);
-        this.createRecipeObserver = new Observer([this.createRecipeView]);
-        this.createRecipeModel = new CreateRecipeModel(this.createRecipeObserver);
-        this.createRecipeController = new CreateRecipeController(this.modal, this.createRecipeModel);
+        this.createRecipeModule = new CreateRecipeModule(this.appObserver);
+        /* Подписываем на события. */
+        this.appObserver.addSubscriber([
+            ...this.recipesModule.subscribe(), //вернет массив подписчиков View и Controller
+            ...this.createRecipeModule.subscribe(), //вернет массив подписчиков View и Controller
+            this.appLocalStorage,        
+        ])
         /* Рассылка всем контроллерам ИвентЭмиттера */
-        this.appControllersObserver = new Observer([this.createRecipeController, this.recipesController]);
-        this.appControllersObserver.broadcastData(this.eventEmitter);
+        this.appObserver.broadcastData({type: 'EVENT_EMITTER', payload: this.eventEmitter});
+        this.appLocalStorage.getItem();
     }
 }

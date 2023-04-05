@@ -9,8 +9,9 @@ export class CreateRecipeController extends Controller {
         this.createButton = element.querySelector('.btn.btn-success.create');
         this.inputs = element.querySelectorAll('input');
     }
-    setController(eventEmitter) {
-        super.setEventEmitter(eventEmitter)
+    setController({type, payload}) {
+        if(type !== 'EVENT_EMITTER') return;
+        super.setEventEmitter(payload)
 
         this.eventEmitter.on('open-create-modal', () => this.methods.open())
         this.inputs.forEach(input => {

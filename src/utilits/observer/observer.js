@@ -5,6 +5,7 @@ export class Observer {
         this.subscribers = subscribers;
     }
     addSubscriber(subscriber) {
+        if(Array.isArray(subscriber)) return this.subscribers = [...this.subscribers, ...subscriber]
         this.subscribers.push(subscriber);
     }
     broadcastData(data) {

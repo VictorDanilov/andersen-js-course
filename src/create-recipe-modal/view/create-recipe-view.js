@@ -4,8 +4,9 @@ export class CreateRecipeView extends View {
     constructor(element) {
         super(element)
     }
-    render(state) {
-        if(state.isOpen) {
+    render({type, payload}) {
+        if(type !== 'CREATE_MODEL') return;
+        if(payload) {
             this.element.classList.add('open');
         } else {
             this.element.classList.remove('open');
