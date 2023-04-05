@@ -1,5 +1,5 @@
 import { Controller } from "../../entities/abstract";
-
+import defaultData from "../../app/defaultData";
 export class AppLocalStorage extends Controller {
     constructor() {
         super()
@@ -11,7 +11,12 @@ export class AppLocalStorage extends Controller {
         this.eventEmitter.on('NEW_DATA', e => localStorage.setItem(this.key, JSON.stringify(e.detail)))
     }
     getItem() {
-        if(localStorage.getItem(this.key)) this.eventEmitter.emit('MESSAGE_CREATED', JSON.parse(localStorage.getItem(this.key)))
+        if(localStorage.getItem(this.key)) {
+            this.eventEmitter.emit('MESSAGE_CREATED', JSON.parse(localStorage.getItem(this.key))) 
+        } else {
+            localStorage.setItem(this.key, JSON.stringify(defaultData))  
+            this.getItem()          
+        }
     }
     
 

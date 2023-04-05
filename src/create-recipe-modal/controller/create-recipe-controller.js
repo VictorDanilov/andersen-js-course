@@ -1,9 +1,8 @@
 import { Controller } from "../../entities/abstract";
 
 export class CreateRecipeController extends Controller {
-    constructor(element, methods) {
-        super(element)
-        this.methods = methods
+    constructor(element, model) {
+        super(element, model)
         this.background = element.querySelector('.bg')
         this.closeButton = element.querySelector('.btn.btn-danger.close');
         this.createButton = element.querySelector('.btn.btn-success.create');
@@ -13,15 +12,15 @@ export class CreateRecipeController extends Controller {
         if(type !== 'EVENT_EMITTER') return;
         super.setEventEmitter(payload)
 
-        this.eventEmitter.on('open-create-modal', () => this.methods.open())
+        this.eventEmitter.on('open-create-modal', () => this.model.open())
         this.inputs.forEach(input => {
             if(input.getAttribute('name') === 'title') {
-                input.addEventListener('change', e => this.methods.writeTitle(e.target.value))
+                input.addEventListener('change', e => this.model.writeTitle(e.target.value))
             } else {
-                input.addEventListener('change', e => this.methods.writeComponents(e.target.value))
+                input.addEventListener('change', e => this.model.writeComponents(e.target.value))
             }
         })
-        this.createButton.addEventListener('click', () => this.eventEmitter.emit('MESSAGE_CREATED', this.methods.postData()))
-        this.element.addEventListener('click', (e) => e.target.hasAttribute('data-close') && this.methods.close())
+        this.createButton.addEventListener('click', () => this.eventEmitter.emit('MESSAGE_CREATED', this.model.postData()))
+        this.element.addEventListener('click', (e) => e.target.hasAttribute('data-close') && this.model.close())
     }
 }

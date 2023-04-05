@@ -1,6 +1,7 @@
 export class Controller {
-    constructor(element) {
+    constructor(element, model) {
         this.element = element;
+        this.model = model;
         this.eventEmitter = null;
     }
     setEventEmitter(eventEmmiter) {
@@ -9,6 +10,9 @@ export class Controller {
     setController() {}
 }
 export class Model {
+    constructor(observer) {
+        this.observer = observer;
+    }
     methods() {}
 }
 export class View {

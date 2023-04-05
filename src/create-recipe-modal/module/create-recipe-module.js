@@ -1,7 +1,6 @@
-import { Observer } from "../../utilits";
-import { CreateRecipeController } from "../controller/create-recipe-controller";
-import { CreateRecipeModel } from "../model/create-recipe-model";
-import { CreateRecipeView } from "../view/create-recipe-view";
+import { CreateRecipeController } from "../";
+import { CreateRecipeModel } from "../";
+import { CreateRecipeView } from "../";
 
 export class CreateRecipeModule {
     constructor (observer) {

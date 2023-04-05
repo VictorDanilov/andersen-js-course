@@ -2,8 +2,7 @@ import { Model } from "../../entities/abstract";
 
 export class CreateRecipeModel extends Model {
     constructor(observer) {
-        super()
-        this.observer = observer;
+        super(observer)
         this.title = null;
         this.components = null;
         this.isOpen = false;

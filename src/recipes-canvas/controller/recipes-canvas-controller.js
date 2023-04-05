@@ -1,8 +1,7 @@
 import { Controller } from "../../entities/abstract";
 export class RecipesCanvasController extends Controller {
-    constructor(element, methods) {
-        super(element)
-        this.methods = methods
+    constructor(element, model) {
+        super(element, model)
         this.button = element.querySelector('button');
     }
     setController({type, payload}) {
@@ -10,8 +9,8 @@ export class RecipesCanvasController extends Controller {
         super.setEventEmitter(payload)
         this.button.addEventListener('click', () => this.eventEmitter.emit('open-create-modal'));
         this.eventEmitter.on('MESSAGE_CREATED', e => {    
-            this.methods.updateData(e.detail)
-            this.eventEmitter.emit('NEW_DATA', this.methods.postData())
+            this.model.updateData(e.detail)
+            this.eventEmitter.emit('NEW_DATA', this.model.postData())
         })
     }
 }

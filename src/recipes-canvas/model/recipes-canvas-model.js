@@ -2,8 +2,7 @@ import { Model } from "../../entities/abstract";
 
 export class RecipesCanvasModel extends Model {
     constructor(observer) {
-        super()
-        this.observer = observer;
+        super(observer)
         this.recipes = [];
     }
     updateData(data) {
