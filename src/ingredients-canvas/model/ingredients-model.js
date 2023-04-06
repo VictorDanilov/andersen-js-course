@@ -8,7 +8,7 @@ export class IngredientsModel extends Model {
         this.target = null;
     }
     updateData(data) {
-        this.ingredients = data.map(el => el.components).join().replace(/\s/g, '').toUpperCase().split(',').filterData()
+        this.ingredients = data.map(el => el.components).join().split(',').filterData()
         this.observer.broadcastData({type: 'INGREDIENTS', payload: this.ingredients})
     }
     setCurrentIngredient(ingredient) {

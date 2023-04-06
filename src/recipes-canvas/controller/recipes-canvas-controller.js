@@ -8,7 +8,7 @@ export class RecipesCanvasController extends Controller {
         if(type !== 'EVENT_EMITTER') return;
         super.setEventEmitter(payload)
         this.button.addEventListener('click', () => this.eventEmitter.emit('open-create-modal'));
-        this.eventEmitter.on('MESSAGE_CREATED', e => {    
+        this.eventEmitter.on('LOCAL_STORAGE_DATA', e => {    
             this.model.updateData(e.detail)
             this.eventEmitter.emit('NEW_DATA', this.model.postData())
         })

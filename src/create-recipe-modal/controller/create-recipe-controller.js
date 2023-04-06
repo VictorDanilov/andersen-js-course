@@ -11,7 +11,7 @@ export class CreateRecipeController extends Controller {
     setController({type, payload}) {
         if(type !== 'EVENT_EMITTER') return;
         super.setEventEmitter(payload)
-
+        this.eventEmitter.on('SHOW_MESSAGE_IN_MODAL', (e) => this.model.showMessage(e.detail))
         this.eventEmitter.on('open-create-modal', () => this.model.open())
         this.inputs.forEach(input => {
             if(input.getAttribute('name') === 'title') {
@@ -20,7 +20,7 @@ export class CreateRecipeController extends Controller {
                 input.addEventListener('change', e => this.model.writeComponents(e.target.value))
             }
         })
-        this.createButton.addEventListener('click', () => this.eventEmitter.emit('MESSAGE_CREATED', this.model.postData()))
+        this.createButton.addEventListener('click', () => this.eventEmitter.emit('LOCAL_STORAGE_DATA', this.model.postData()))
         this.element.addEventListener('click', (e) => e.target.hasAttribute('data-close') && this.model.close())
     }
 }

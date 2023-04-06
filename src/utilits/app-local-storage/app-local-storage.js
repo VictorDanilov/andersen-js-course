@@ -12,7 +12,7 @@ export class AppLocalStorage extends Controller {
     }
     getItem() {
         if(localStorage.getItem(this.key)) {
-            this.eventEmitter.emit('MESSAGE_CREATED', JSON.parse(localStorage.getItem(this.key))) 
+            this.eventEmitter.emit('LOCAL_STORAGE_DATA', JSON.parse(localStorage.getItem(this.key))) 
         } else {
             localStorage.setItem(this.key, JSON.stringify(defaultData))  
             this.getItem()          

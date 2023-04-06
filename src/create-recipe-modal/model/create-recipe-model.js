@@ -20,13 +20,17 @@ export class CreateRecipeModel extends Model {
         this.title = value;
     }
     writeComponents(value) {
-        this.components = value;
+        this.components = value.toUpperCase();
     }
     postData() {
         if(this.components === null) return
-        const components = this.components.split(',');
+        const components = this.components.split(/\s*,\s*/);
         this.close()
         return {title: this.title, components}
+    }
+    showMessage(data) {
+        console.log(data)
+        this.observer.broadcastData({type: 'SHOW_MESSAGE', payload: data})
     }
     methods() {
         return {
@@ -35,6 +39,7 @@ export class CreateRecipeModel extends Model {
             writeTitle: this.writeTitle,
             writeComponents: this.writeComponents,
             postData: this.postData,
+            showMessage: this.showMessage,
         }
     }
     
