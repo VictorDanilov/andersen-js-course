@@ -1,9 +1,9 @@
-import { RecipesCanvasController } from "../";
-import { RecipesCanvasModel } from "../";
-import { RecipesCanvasView } from "../";
+import { RecipesCanvasController, RecipesCanvasModel, RecipesCanvasView } from "../";
+import { Module } from "../../entities/abstract";
 
-export class RecipesCanvasModule {
+export class RecipesCanvasModule extends Module {
     constructor(observer) {
+        super()
         this.recipesWrapper = document.querySelector('.recipes-canvas');
         this.recipesView = new RecipesCanvasView(this.recipesWrapper);
         this.recipesModel = new RecipesCanvasModel(observer);

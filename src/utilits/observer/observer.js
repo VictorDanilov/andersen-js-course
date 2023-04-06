@@ -1,6 +1,6 @@
 import { Controller, View } from "../../entities/abstract";
 
-export class Observer {
+export class AppObserver {
     constructor(subscribers = []) {
         this.subscribers = subscribers;
     }

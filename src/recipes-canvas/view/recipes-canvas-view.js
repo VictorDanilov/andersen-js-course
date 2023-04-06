@@ -7,9 +7,7 @@ export class RecipesCanvasView extends View {
     }
     render({type, payload}) {
         const list = this.element.querySelector('.list')
-        console.log(list)
         if(type !== 'RECIPES_MODEL') return;
-        console.log(payload)
             const all = this.element.querySelectorAll('.recipe');
             all.forEach(elem => elem.remove())
         payload.forEach(recipe => {

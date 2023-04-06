@@ -1,4 +1,4 @@
-export class MyEventEmitter {
+export class AppEventEmitter {
     constructor() {
         this.d = document;
     }

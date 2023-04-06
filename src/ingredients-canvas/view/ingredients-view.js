@@ -7,10 +7,11 @@ export class IngredientsView extends View {
     }
     render({type, payload}) {
         if(type !== 'INGREDIENTS') return;
-        const allIngredients = this.wrapper.querySelectorAll('.ingredient')
+        const allIngredients = this.wrapper.querySelectorAll('.ingredient.orange')
         allIngredients.forEach(ingredient => ingredient.remove())
         payload.forEach(ingredient => {
             const elem = document.createElement('div');
+            elem.setAttribute('draggable', true)
             elem.classList.add('ingredient');
             elem.classList.add('orange');
             elem.innerText = ingredient;

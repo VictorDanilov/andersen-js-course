@@ -21,3 +21,7 @@ export class View {
     }
     render() {}
 }
+export class Module {
+
+    subscribe() {}
+}
