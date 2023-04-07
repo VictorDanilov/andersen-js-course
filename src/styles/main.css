@@ -85,6 +85,9 @@ body {
   background-color: white;
   border-radius: 6px;
 }
+.results-btn {
+  top: -8px;
+}
 .craft-tool {
   position: absolute;
   top: 100px;

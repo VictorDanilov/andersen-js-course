@@ -23,7 +23,6 @@ export class CraftModel extends Model {
     }
     createItem() {
         const result = []
-
         this.recipes.forEach(rec => {
             let state = true;
             const recipe = [...rec.components].sort((a, b) => a > b ? 1 : -1);
@@ -33,13 +32,16 @@ export class CraftModel extends Model {
             }
             if(state) {
                 this.currentItem = rec.title
-                result.push(rec.title)
+                this.result.push(rec.title)
             }
         })
         setTimeout(() => this.currentItem = null, 50)
+        this.observer.broadcastData({type: 'CRAFT_MODEL_RESULT', payload: this.result})
     }
     getItem() {
-        return this.currentItem;
+
+        return {current: this.currentItem, all: this.result};
+
     }
     methods() {
         return {
