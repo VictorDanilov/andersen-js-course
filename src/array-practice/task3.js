@@ -11,3 +11,10 @@
  *
  * forEachRight([1, 2, 3, 4], val => console.log(val)); -> в консоль 4 3 2 1
  */
+
+
+export const forEachRight = (arr, func) => {
+  for (let i = arr.length; i > 0; i--) {
+    func(i);
+  }
+}
